@@ -1,0 +1,62 @@
+programa
+{
+	/* Poder da Moeda
+ *  
+ * Copyright (C) 2023 - FAC-SP -Faculdade do Comércio
+ * 
+ * Este arquivo de código fonte é livre para utilização, cópia e/ou modificação
+ * desde que este cabeçalho, contendo os direitos autorais e a descrição do programa, 
+ * seja mantido.
+ * 
+ * Vamos utilizar bilbioteca e estrutura de LOOP enquanto
+ * 
+ * Descrição:
+ * 
+ * 	Este exemplo demonstra um progama para comparar o poder de compra com o salário minímo de Portugal, em relação ao salário minímo do Brasil, 
+ * 	a ideia foi pegar o salário minimo de cada país em EURO  e REAIS e a partir  
+ * 	dessa premissa comparar quanto porcento do salário minímo é necessário para adquirir o mesmo item.	
+ * 
+ * Autores:
+ * 
+ * 	Alex Conceição dos Santos (alex.santos@facsp.com.br)
+ * 	
+ * Data: 13/10/2023 horário 3:30
+ */
+
+	inclua biblioteca Matematica --> mat 
+	funcao inicio()
+	{
+		cadeia Nome_Item
+		real SalM_por=760.00, SalM_bra=1320.00, preco_por, preco_bra,valor_por=0.0, valor_bra=0.0
+		inteiro sair=1
+		
+		enquanto (sair != 0)
+			{
+		
+		escreva ("Digite o Nome do Produto\n")
+		leia(Nome_Item)
+
+
+		escreva("Qual o Valor do Produto em EURO\n")
+		leia(preco_por)
+
+		escreva("Qual o Valor do Produto em REAIS\n")
+		leia(preco_bra)
+
+				valor_por=(preco_por*100)/SalM_por
+				valor_bra=(preco_bra*100)/SalM_bra
+				
+				valor_por=mat.arredondar(valor_por, 2)
+				valor_bra=mat.arredondar(valor_bra, 2)
+		
+		escreva("Para comprar ",Nome_Item, " você precisa de ",valor_por, "% do salário minimo em EURO \n")
+		escreva("Para comprar ",Nome_Item, " você precisa de ",valor_bra, "% do salário minimo em REAIS \n\n")
+				
+			escreva ("Você Deseja COMPARAR outro Produdo ou SAIR do Programa ? \n")
+			escreva ("Digite 0 para SAIR ou Digite 1 para COMPARAR \n")
+			leia(sair)
+			limpa()
+		
+			}	
+	}
+}
