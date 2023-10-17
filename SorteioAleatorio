@@ -1,0 +1,51 @@
+
+/* Poder da Moeda
+ *  
+ * Copyright (C) 2023 - FAC-SP -Faculdade do Comércio
+ * 
+ * Este arquivo de código fonte é livre para utilização, cópia e/ou modificação
+ * desde que este cabeçalho, contendo os direitos autorais e a descrição do programa, 
+ * seja mantido.
+ * 
+ * Vamos utilizar bilbioteca e estrutura de LOOP enquanto, biblioteca LOOP
+ * 
+ * Descrição:
+ * 
+ * 	Este exemplo demonstra um progama Sorteia um numero aleatório de 0 a 40, quando o número escolhido for sorteado e o mesmo for menor 
+ * que 5 receberar R$ 5.000 reais
+ * 
+ * Autores:
+ * 
+ * 	Alex Conceição dos Santos (alex.santos@facsp.com.br)
+ * 	
+ * Data: 17/10/2023 horário 20:52
+ */
+
+
+programa {
+    inclua biblioteca Util -->util
+  	funcao inicio()
+	{
+		inteiro numero, num_sort
+
+		escreva("Escolhar um Número qualquer \n")
+		leia(numero)
+
+		num_sort = util.sorteia (0,40)
+
+		se (numero >=0 e numero <=40)
+		{
+			se (numero == num_sort){
+        se (numero <=5){
+		escreva("Numero Sorteado é, ", num_sort,"\n")
+    escreva("Você Acertou Parabéns GAnhou Cheque de R$ 5.000 \n")
+		} 
+    
+    }senao {
+         escreva("Que Pena Você Não Ganhou\n")
+         escreva("Numero Sorteado é, ", num_sort,"\n")
+        escreva("Tente Novamente")
+            }
+  }
+  }
+}
