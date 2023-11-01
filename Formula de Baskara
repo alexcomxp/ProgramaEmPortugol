@@ -1,0 +1,53 @@
+programa
+{
+	/* Formula de Baskara
+ *  
+ * Copyright (C) 2023 - FAC-SP -Faculdade do Comércio
+ * 
+ * Este arquivo de código fonte é livre para utilização, cópia e/ou modificação
+ * desde que este cabeçalho, contendo os direitos autorais e a descrição do programa, 
+ * seja mantido.
+ * 
+ * Vamos utilizar bilbioteca
+ * 
+ * Descrição:
+ * 
+ * 	Este exemplo demonstra um progama para calcular a formula de Baskara.
+ * 	
+ * Autores:
+ * 
+ * 	Alex Conceição dos Santos (alex.santos@facsp.com.br)
+ * 	
+ * Data: 13/10/2023 horário 3:30
+ * 
+ * Exemplo para teste: A=1, B=-9 e C=2
+ * Valor x1 = 8,77
+ * Valor x2 = 0,23
+ * 
+ */
+	
+	inclua biblioteca Matematica--> mat
+	
+	funcao inicio()
+	{
+		real a,b,c, delta,x1,x2
+
+		escreva ("Valor de A \n")
+		leia(a)
+
+		escreva ("Valor de B\n")
+		leia(b)
+
+		escreva ("Valor de C\n")
+		leia(c)
+		limpa()
+		delta = mat.potencia(b,2) - 4*a*c
+		escreva("Valor de Delta", delta,"\n")
+		x1= (-b+ mat.raiz(delta, 2.0))/2*a
+		x2= (-b- mat.raiz(delta, 2.0))/2*a
+		x1=mat.arredondar(x1, 2)
+		x2=mat.arredondar(x2, 2)
+		escreva("O valor de X1 é   ", x1, "\n")
+		escreva("O valor de X2 é   ", x2, "\n")
+	}
+}
